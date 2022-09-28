@@ -3,10 +3,6 @@
 Sistema de Comercio Electrónico (CRUD) para venta de comidas rápidas (PHP/MySQL)
 ---
 ### Tecnologías 💻
-=======
-Sistema de Comercio Electrónico para venta de comidas rápidas (PHP/MySQL)
----
-### Tecnologías
 
 - HTML/CSS/JS
 - Bootstrap 5
