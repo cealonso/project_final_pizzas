@@ -1,5 +1,5 @@
 # Proyecto Comercio de Pizzas
----
+
 Sistema de Comercio Electrónico para venta de comidas rápidas (PHP/MySQL)
 ---
 ### Tecnologías
