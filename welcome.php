@@ -7,7 +7,6 @@
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/all.css">
-    <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/welcome.css">
     <script src="js/jquery-3.6.1.min.js"></script>
     <script src="js/bootbox.min.js"></script>
@@ -24,8 +23,8 @@
            
         }
 
-        function updateProduct(cod_zapatilla) {
-            window.location = "edit.php?q=" + cod_zapatilla;
+        function updateProduct(cod) {
+            window.location = "edit.php?q=" + cod;
 
         }
     </script>
