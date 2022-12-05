@@ -1,8 +1,8 @@
--- MariaDB dump 10.19  Distrib 10.4.24-MariaDB, for Win64 (AMD64)
+-- MariaDB dump 10.19  Distrib 10.4.25-MariaDB, for Win64 (AMD64)
 --
 -- Host: localhost    Database: commerce
 -- ------------------------------------------------------
--- Server version	10.4.24-MariaDB
+-- Server version	10.4.25-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -26,7 +26,7 @@ CREATE TABLE `categories` (
   `id_category` int(11) NOT NULL AUTO_INCREMENT,
   `category_name` varchar(50) NOT NULL,
   PRIMARY KEY (`id_category`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -35,7 +35,7 @@ CREATE TABLE `categories` (
 
 LOCK TABLES `categories` WRITE;
 /*!40000 ALTER TABLE `categories` DISABLE KEYS */;
-INSERT INTO `categories` VALUES (1,'pizzas'),(2,'hamburguesas');
+INSERT INTO `categories` VALUES (1,'Pizzas'),(2,'Hamburguesas'),(3,'Picada'),(4,'Gaseosas');
 /*!40000 ALTER TABLE `categories` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -53,11 +53,10 @@ CREATE TABLE `products` (
   `start_date` timestamp NOT NULL DEFAULT current_timestamp(),
   `id_category` int(11) NOT NULL,
   `image` varchar(255) DEFAULT NULL,
-  `description` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id_product`),
   KEY `products_categories` (`id_category`),
   CONSTRAINT `products_categories` FOREIGN KEY (`id_category`) REFERENCES `categories` (`id_category`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -66,7 +65,7 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (1,'Especial Morrones',1428.00,'2022-08-24 02:03:18',1,'images/morrones.jpg',NULL),(2,'Especial Napolitana',1428.00,'2022-08-24 02:03:18',1,'images/napolitana.jpg',NULL),(3,'Mixta Calabresa y Tomates',1581.00,'2022-08-24 02:03:18',1,'images/mixta.jpg',NULL),(4,'Especial de Tomates',1397.40,'2022-08-24 02:03:18',1,'images/tomate.jpg',NULL),(5,'Especial Fugaza',1275.00,'2022-08-24 02:03:18',1,'images/fugaza.jpg',NULL),(6,'Especial Primavera',1275.00,'2022-08-24 02:03:18',1,'images/especial.jpg',NULL),(19,'Pancho Doble',500.00,'2022-09-28 22:39:41',2,'images/pancho_dbl.jpg',NULL);
+INSERT INTO `products` VALUES (2,'Especial de Morrones',1920.00,'2022-10-12 20:26:33',1,'images/morrones.jpg'),(3,'Napolitana',2100.00,'2022-11-02 01:12:48',1,'images/napolitana.jpg'),(4,'Fugazza',1900.00,'2022-11-02 01:13:43',1,'images/fugaza.jpg'),(5,'Completa',2150.00,'2022-11-02 01:14:42',2,'images/hamburguesa_completa.jpg'),(6,'Coca 1.5 l',350.00,'2022-11-02 02:37:46',4,'images/gaseosas.jpg'),(7,'Fanta 1.5 l',350.00,'2022-11-02 02:37:46',4,'images/gaseosas.jpg'),(8,'Sprite 1.5 l',350.00,'2022-11-02 02:37:46',4,'images/gaseosas.jpg'),(9,'Coca Zero 1.5 l',350.00,'2022-11-02 02:37:46',4,'images/gaseosas.jpg'),(10,'Coca Light 1.5 l',350.00,'2022-11-02 02:37:46',4,'images/gaseosas.jpg');
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -79,4 +78,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-09-28 20:23:15
+-- Dump completed on 2022-12-05 18:14:59

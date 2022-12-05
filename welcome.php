@@ -103,6 +103,12 @@
             $table = " </tbody>
                 </table>";
             echo $table;
+            $stmt = $link->query('SELECT count(*) FROM products');
+            $rows = $stmt->fetchColumn();
+        
+            echo "<p class='font-weight-bold'>";
+            echo "Productos : ".$rows ;
+            echo "</p>";
         } else {
         }
 
